@@ -12,3 +12,10 @@ repositories {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 }
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'pusha2.testdrive.ServerTest.kt'
+    }
+    archiveName 'Pusha2.jar'
+}

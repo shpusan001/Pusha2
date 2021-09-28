@@ -1,0 +1,10 @@
+package pusha2.client.handler.recieve.excutor
+
+import pusha2.domain.SockDto
+import pusha2.util.Log.PushaLog
+
+class NoticeExcutor : ClientRecieveExcutor {
+    override fun excute(sockDto: SockDto) {
+        PushaLog.log("[${sockDto.from}]==> " + sockDto.data)
+    }
+}
