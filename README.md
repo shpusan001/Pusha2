@@ -181,7 +181,7 @@ class NoticeExcutor : ClientRecieveExcutor {
 ```kotlin
 //ClientRecieveHandler
 val clientRecieveHandler:ClientRecieveHandler 
-    = ServerContainer.serverRecieveHandler()
+    = ClientContainer.clientRecieveHandler()
 
 //"NOITCE"라는 명령을 가진 메시지가 들어오면, 
 // NoticeExcutor의 execute 실행
