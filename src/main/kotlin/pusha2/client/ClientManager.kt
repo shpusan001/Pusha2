@@ -49,7 +49,7 @@ class ClientManager {
             return wrappedSocket
         } catch (e: Exception) {
             clientSocketExceptionHandler.connectionFaild()
-            //throw e
+            throw e
         }
         return null
     }
