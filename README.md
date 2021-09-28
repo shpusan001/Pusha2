@@ -122,7 +122,7 @@ clientManager.processing()
  val serverManager: ServerManager = ServerContainer.serverManager()
 
 //SockDto를 생성후, 메시지 전송
- serverManager.sendData(SockDto(clientManager.id,"NOTICE", "#", "message", null))
+ serverManager.sendData(SockDto("Server","NOTICE", "#", "message", null))
 ```
 
 #### 클라이언트
