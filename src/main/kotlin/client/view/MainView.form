@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="dekilla.core.client.view.MainView">
+  <grid id="27dc6" binding="container" layout-manager="GridLayoutManager" row-count="9" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="5">
+    <margin top="20" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="20" y="20" width="800" height="636"/>
+    </constraints>
+    <properties>
+      <background color="-3552916"/>
+    </properties>
+    <clientProperties>
+      <html.disable class="java.lang.Boolean" value="false"/>
+    </clientProperties>
+    <border type="none"/>
+    <children>
+      <component id="5da7b" class="javax.swing.JTextField" binding="Tf_myToken">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="250" height="-1"/>
+            <preferred-size width="400" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <enabled value="true"/>
+          <font name="Arial" size="14"/>
+          <foreground color="-16777216"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="af7a3" class="javax.swing.JLabel" binding="La_myToken">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="98" height="26"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Arial" size="16" style="0"/>
+          <foreground color="-16777216"/>
+          <text value="My token"/>
+        </properties>
+      </component>
+      <component id="d3ee7" class="javax.swing.JTextField" binding="Tf_downPath">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Arial" size="14" style="0"/>
+          <foreground color="-16777216"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="57dcb" class="javax.swing.JLabel" binding="La_downPath">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="98" height="26"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Arial" size="16" style="0"/>
+          <foreground color="-16777216"/>
+          <text value="DownLoad folder"/>
+        </properties>
+      </component>
+      <component id="b3f51" class="javax.swing.JButton" binding="Bu_downPath">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-3566537"/>
+          <font name="Arial" size="16" style="0"/>
+          <text value="setting"/>
+        </properties>
+      </component>
+      <component id="5718f" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial" size="14" style="0"/>
+        </properties>
+      </component>
+      <component id="9f821" class="javax.swing.JLabel" binding="La_upPath">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="98" height="26"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Arial" size="16" style="0"/>
+          <foreground color="-16777216"/>
+          <text value="File to send"/>
+        </properties>
+      </component>
+      <component id="4aa41" class="javax.swing.JTextField" binding="Tf_upPath">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Arial" size="14" style="0"/>
+          <foreground color="-16777216"/>
+        </properties>
+      </component>
+      <component id="f892d" class="javax.swing.JButton" binding="Bu_upPath">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-3566537"/>
+          <font name="Arial" size="16" style="0"/>
+          <text value="setting"/>
+        </properties>
+      </component>
+      <component id="ea100" class="javax.swing.JLabel" binding="La_targetToken">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="98" height="26"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Arial" size="16" style="0"/>
+          <foreground color="-16777216"/>
+          <text value="Target token"/>
+        </properties>
+      </component>
+      <component id="33dc7" class="javax.swing.JTextField" binding="Tf_targetToken">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Arial" size="14" style="0"/>
+          <foreground color="-16777216"/>
+        </properties>
+      </component>
+      <component id="704e3" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="8b711" class="javax.swing.JButton" binding="Bu_connect">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-3566537"/>
+          <font name="Arial" size="16" style="0"/>
+          <text value="connect"/>
+        </properties>
+      </component>
+      <scrollpane id="93707" binding="Js_status">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="100"/>
+            <preferred-size width="-1" height="200"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="63857" class="javax.swing.JTextArea" binding="Ta_status">
+            <constraints/>
+            <properties>
+              <editable value="false"/>
+              <font name="Arial" size="13" style="0"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="f9b0f" class="javax.swing.JButton" binding="bu_statusClear">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-3566537"/>
+          <font name="Arial" size="16" style="0"/>
+          <text value="Clear"/>
+        </properties>
+      </component>
+      <component id="9f928" class="javax.swing.JButton" binding="Bu_send">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-3566537"/>
+          <font name="Arial" size="16" style="1"/>
+          <text value="Send file"/>
+        </properties>
+      </component>
+      <component id="afcb2" class="javax.swing.JLabel" binding="La_logo">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="DekillaLogoSuperSmall.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
