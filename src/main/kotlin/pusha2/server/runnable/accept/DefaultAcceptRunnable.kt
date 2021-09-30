@@ -9,6 +9,7 @@ import pusha2.util.socket.SocketUtil
 import pusha2.util.socket.WrappedSocket
 import java.net.ServerSocket
 import java.net.Socket
+import java.net.SocketException
 
 class DefaultAcceptRunnable : AcceptRunnable {
 
@@ -43,7 +44,12 @@ class DefaultAcceptRunnable : AcceptRunnable {
                 var connectRequest: SockDto
 
                 do {
-                    connectRequest = socketUtil.recieve(socket) as SockDto
+                    try {
+                        connectRequest = socketUtil.recieve(socket) as SockDto
+                    }catch (e:SocketException){
+                        PushaLog.log("abnormal connection")
+                        return
+                    }
                 } while (connectRequest.command != "CONNECT")
 
                 val sockId: String = connectRequest.data
