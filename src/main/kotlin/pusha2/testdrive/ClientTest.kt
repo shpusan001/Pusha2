@@ -18,8 +18,6 @@ class ClientTest {
             clientManager.connect("clientme")
             clientManager.processing()
 
-            clientManager.sendData(SockDto(clientManager.id,"NOTICE", "#", "hi", null))
-
 
             /*
             val clientManagerlist:ArrayList<ClientManager> = ArrayList()

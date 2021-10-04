@@ -43,20 +43,24 @@ class DefaultAcceptRunnable : AcceptRunnable {
             if (!Thread.interrupted()) {
                 var connectRequest: SockDto
 
-                do {
-                    try {
-                        connectRequest = socketUtil.recieve(socket) as SockDto
-                    }catch (e:SocketException){
-                        PushaLog.log("abnormal connection")
-                        return
-                    }
-                } while (connectRequest.command != "CONNECT")
+                try {
+                    connectRequest = socketUtil.recieve(socket) as SockDto
+                    PushaLog.log(connectRequest.data)
+                }catch (e:SocketException){
+                    PushaLog.log("Abnormal connection [-1]")
+                    socket.close()
+                    return
+                }
 
-                val sockId: String = connectRequest.data
-                val wrappedSocket = WrappedSocket(socket, sockId)
-                sockRepository.add(sockId, wrappedSocket)
-
-                PushaLog.log("[${sockId}] is connected")
+                if(connectRequest.command == "CONNECT"){
+                    val sockId: String = connectRequest.data
+                    val wrappedSocket = WrappedSocket(socket, sockId)
+                    sockRepository.add(sockId, wrappedSocket)
+                    PushaLog.log("[${sockId}] is connected")
+                }else{
+                    PushaLog.log("Abnormal connection [-2]")
+                    socket.close()
+                }
             }
         }
 
