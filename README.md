@@ -28,13 +28,14 @@ Pusha2는 TCP기반의 푸시 서버구축 라이브러리 입니다.
 + ClientManager : 클라이언트 구축을 담당
 
 2.메시지 처리기  
+
 + ServerRecieveHandler : 서버가 받은 메시지 처리를 담당
 + ClientRecieveHandler : 클라이언트가 받는 메시지 처리를 담당
 
 3.패킷   
 + SockDto : 데이터 패킷 
 
-#### 구성요소 불러오기 
+##### 구성요소 불러오기 
 
 ```kotlin
 //ServerManager
@@ -54,7 +55,7 @@ val clientRecieveHandler:ClientRecieveHandler
     = ClientContainer.clientRecieveHandler()
 ```
 
-#### SockDto 구성
+##### SockDto 구성
 
 ```kotlin
 data class SockDto(
@@ -76,8 +77,9 @@ data class SockDto(
 ```
 
 ---
+#### 서버 및 클라이언트 구축
 
-#### 서버 구축
+##### 서버 구축
 
 ```kotlin
 //포트 지정
@@ -92,11 +94,11 @@ serverManager.accept()
 //서버 메시지 처리기 실행
 serverManager.processing()
 ```
-위의 절차로 서버의 구축이 완료됩니다.
+위의 절차로 서버의 구축이 완료된다.
 
 ---
 
-#### 클라이언트 구축
+##### 클라이언트 구축
 
 ```kotlin
 //접속할 서버의 아이피와 포트 설정
@@ -113,7 +115,7 @@ clientManager.connect("name")
 //클라이언트 메시지 처리기 실행
 clientManager.processing()
 ```
-위의 절차로 클라이언트의 구축이 완료됩니다.
+위의 절차로 클라이언트의 구축이 완료된다.
 
 ---
 
@@ -129,7 +131,7 @@ clientManager.processing()
  serverManager.sendData("name", SockDto("Server","NOTICE", "#", "message", null))
 ```
 
-#### 클라이언트
+##### 클라이언트
 ```kotlin
 //ClientManager
 val clientManager: ClientManager = ClientContainer.clientManager()
@@ -153,7 +155,7 @@ class NoticeExcutor : ServerRecieveExcutor {
     }
 }
 ```
->위의 코드는 로그출력을 수행한다.
+>위의 코드는 클라이언트로 받은 메시지를 출력한다.
 
 2. ServerRecieveHandler에 액션을 추가
 
@@ -178,8 +180,8 @@ class NoticeExcutor : ClientRecieveExcutor {
     }
 }
 ```
->위의 코드는 로그출력을 수행한다.  
-  
+>위의 코드는 서버로 부터 받은 메시지를 출력한다.
+
 2. ClientRecieveHandler에 액션을 추가
 
 ```kotlin
